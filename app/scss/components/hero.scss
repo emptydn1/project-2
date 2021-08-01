@@ -23,14 +23,46 @@
         place-content: center;
         text-align: center;
         color: #ffffff;
-
-        h1 {
-          border: rem(10) solid;
-          padding: rem(30) rem(40);
-          font-weight: 800;
-          transform: matrix(2.14932126696833, 0, 0, 2.14623075089063, 0, 0);
-          animation: right-left-2 800ms ease-out backwards;
+        fieldset {
+          padding: rem(62) rem(100);
+          border: 10px solid;
+          transform: rotate(180deg);
+          animation: mid 800ms ease-out backwards;
           animation-delay: calc(2 * var(--stagger-delay));
+          legend {
+            font-family: var(--font-lato);
+            font-weight: 800;
+            padding: 0 rem(10);
+            transform: rotate(180deg);
+            font-size: rem(70);
+          }
+        }
+        h1 {
+          padding: 0;
+          font-weight: 800;
+          transform: matrix(2.14932126696833, 0, 0, 2.14623075089063, 0, 0)
+            rotate(180deg);
+          animation-name: none;
+          // &::before {
+          //   content: attr(data-sale);
+          //   position: absolute;
+          //   // transform: matrix(0.4, 0, 0, 0.4, 0, 0);
+          //   white-space: pre;
+          //   bottom: -34%;
+          //   left: -9%;
+          //   transform: matrix(0.4, 0, 0, 0.4, 0, 0);
+
+          // }
+        }
+        p {
+          font-family: var(--font-lato);
+          font-weight: 800;
+          color: red;
+          transform: rotate(180deg);
+          animation-name: mid;
+          // // transform: matrix(0.4, 0, 0, 0.4, 0, 0);
+          // background-color: rgba(255, 255, 255, 0.5);
+          // backdrop-filter: blur(5px);
         }
       }
     }
