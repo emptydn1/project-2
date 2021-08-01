@@ -1,0 +1,101 @@
+// // https://stackoverflow.com/questions/3331353/transitions-on-the-css-display-property
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+//   99% {
+//     height: auto;
+//     opacity: 1;
+//   }
+//   to {
+//     height: auto;
+//     opacity: 1;
+//     overflow: visible;
+//     transform: translateX(0);
+//   }
+// }
+// .fade-in {
+//   animation: fade-in 1s ease-in-out forwards;
+// }
+
+@keyframes fade-out {
+  from {
+    height: auto;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateX(0);
+  }
+  99% {
+    height: 0;
+    opacity: 0;
+    height: auto;
+  }
+  to {
+    transform: translateX(-100%);
+    height: auto !important;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+.fade-out {
+  animation: fade-out 1s ease-in-out forwards;
+}
+
+//
+@keyframes top-mid {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-left {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes right-left-2 {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    transform: matrix(2.14932126696833, 0, 0, 2.14623075089063, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    transform: matrix(2.14932126696833, 0, 0, 2.14623075089063, 0, 0);
+  }
+}

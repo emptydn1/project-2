@@ -11,6 +11,14 @@ p {
   margin: 0;
 }
 
+p {
+  &--top-head {
+    font-family: var(--font-lato);
+    font-weight: 400;
+    font-size: rem(13);
+  }
+}
+
 /* Chỉ cho phép textarea được kéo dãn theo chiều dọc, trông sẽ đẹp hơn, không làm xấu layout */
 textarea {
   resize: vertical;
@@ -25,6 +33,7 @@ img {
 ul,
 ol {
   list-style: none;
+  margin: 0;
 }
 
 /* Tạo hiệu ứng bôi đen text khác biệt hơn mặc định */
@@ -38,3 +47,12 @@ a:visited,
 a:hover {
   text-decoration: none;
 }
+// a,
+// a:link,
+// a:visited,
+// a:focus,
+// a:hover,
+// a:active {
+//   text-decoration: none;
+//   color: inherit;
+// }
