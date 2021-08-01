@@ -1,5 +1,3 @@
-// let Flickity = require("Flickity");
-
 let time = setInterval(function () {
   autoSlide();
 }, 4000);
@@ -19,7 +17,6 @@ function autoSlide() {
     (thisActive = thisActive.previousElementSibling);
     position++
   ) {}
-  console.log(position);
 
   if (position < slides.length - 1) {
     remove(slides, "active");
@@ -31,32 +28,94 @@ function autoSlide() {
 }
 
 //slide// init Flickity
+let query = (queryClass, temp = true) => {
+  return temp
+    ? document.querySelector(queryClass)
+    : document.querySelectorAll(queryClass);
+};
+
+// let elem = query(".products .main-carousel");
+// let flkty = new Flickity(elem, {
+//   prevNextButtons: false,
+//   pageDots: false,
+// });
+
+// let cellButtonGroup = query(".button-group--cells");
+// let cellButtons = query(".button-group--cells .button", false);
+
+// let btn_pre = query(".products .button--previous");
+// let btn_nex = query(".products .button--next");
+// cellButtons = fizzyUIUtils.makeArray(cellButtons);
+
+// btn_pre.addEventListener("click", function (e) {
+//   let position;
+//   let thisActive = query(".button-group--cells .button.is-selected");
+//   for (
+//     position = 0;
+//     (thisActive = thisActive.previousElementSibling);
+//     position++
+//   ) {}
+//   remove(cellButtons, "is-selected");
+
+//   if (position > 0) {
+//     cellButtons[position - 1].classList.add("is-selected");
+//   } else {
+//     cellButtons[cellButtons.length - 1].classList.add("is-selected");
+//   }
+//   flkty.next(true);
+// });
+
+// btn_nex.addEventListener("click", function (e) {
+//   let position;
+//   let thisActive = query(".button-group--cells .button.is-selected");
+//   for (
+//     position = 0;
+//     (thisActive = thisActive.previousElementSibling);
+//     position++
+//   ) {}
+//   remove(cellButtons, "is-selected");
+
+//   if (position < cellButtons.length - 1) {
+//     cellButtons[position + 1].classList.add("is-selected");
+//   } else {
+//     cellButtons[0].classList.add("is-selected");
+//   }
+//   flkty.previous(true);
+// });
+
+// cellButtonGroup.addEventListener("click", function (event) {
+//   if (!matchesSelector(event.target, ".button")) {
+//     return;
+//   }
+
+//   remove(cellButtons, "is-selected");
+//   let index = cellButtons.indexOf(event.target);
+//   cellButtons[index].classList.add("is-selected");
+//   flkty.select(index);
+// });
+
+
+
 var $carousel = $(".products .main-carousel").flickity({
   prevNextButtons: false,
   pageDots: false,
 });
-// Flickity instance
 var flkty = $carousel.data("flickity");
-// elements
 var $cellButtonGroup = $(".button-group--cells");
 var $cellButtons = $cellButtonGroup.find(".button");
 
-// update selected cellButtons
 $carousel.on("select.flickity", function () {
   $cellButtons.filter(".is-selected").removeClass("is-selected");
   $cellButtons.eq(flkty.selectedIndex).addClass("is-selected");
 });
 
-// select cell on button click
 $cellButtonGroup.on("click", ".button", function () {
   var index = $(this).index();
   $carousel.flickity("select", index);
 });
-// previous
 $(".button--previous").on("click", function () {
   $carousel.flickity("previous", true);
 });
-// next
 $(".button--next").on("click", function () {
   $carousel.flickity("next", true);
 });

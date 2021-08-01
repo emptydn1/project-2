@@ -22,5 +22,7 @@
     "postcss": "^8.3.6",
     "sass": "^1.36.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "flickity": "^2.2.2"
+  }
 }

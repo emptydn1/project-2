@@ -1,0 +1,21 @@
+@use '../utils' as *;
+
+.font-default {
+  span {
+    border: none;
+    line-height: 1.915;
+    text-align: center;
+    font-family: var(--font-rale);
+    font-weight: 700;
+    padding: 0;
+    font-size: rem(18);
+    opacity: 0.6;
+    text-transform: uppercase;
+    transform: matrix(1.00074921037202, 0, 0, 0.99561258096967, 0, 0);
+  }
+  p {
+    line-height: 1.778;
+    font-size: rem(16);
+    font-weight: 700;
+  }
+}
