@@ -1,6 +1,7 @@
 @use '../utils' as *;
 
 .hero {
+  min-height: rem(670);
   .container-lg {
     position: relative;
     // height: 80vh;
@@ -101,6 +102,7 @@
     text-align: left;
     max-width: rem(820);
     h2 {
+      text-transform: uppercase;
       font-style: rem(26);
       padding-bottom: rem(30);
     }
