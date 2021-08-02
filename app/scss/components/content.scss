@@ -101,6 +101,7 @@
     color: rgb(63, 63, 63);
     font-size: rem(14);
     padding-bottom: rem(30);
+    margin-bottom: rem(30);
     .btn {
       i {
         border: 1px solid #e1e1e1;
@@ -133,6 +134,34 @@
         object-fit: contain;
         object-position: center;
       }
+    }
+  }
+
+  //brands
+  .brands {
+    border: 1px solid #e1e1e1;
+    padding: 0 rem(20);
+    padding-bottom: rem(30);
+    text-align: center;
+    .btn {
+      i {
+        border: 1px solid #e1e1e1;
+        padding: rem(7) rem(9);
+        &:not(:last-child) {
+          margin-right: rem(10);
+        }
+      }
+    }
+
+    &__grid {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: rem(10);
+      padding-bottom: rem(20);
+    }
+    &__item {
+      width: calc((100% - (10 * 00.0625rem)) / 2);
     }
   }
 
